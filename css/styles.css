@@ -1,0 +1,91 @@
+/* Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+
+/* Basic Styles */
+html {
+  background: url("../assets/cubes.png"), #7a0014;
+  background: url("../assets/cubes.png"),
+    linear-gradient(to right, rgba(0, 35, 108, 1) 7%, rgba(99, 15, 0, 1) 100%);
+}
+body {
+  font-family: "Montserrat", sans-serif;
+  color: white;
+  margin: 0;
+}
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  width: 100%;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.6),
+    rgba(0, 0, 0, 0.8)
+  );
+  height: 42px;
+}
+
+li {
+  margin-left: 10%;
+  float: left;
+}
+nav h1 {
+  font-family: "Kaushan Script", cursive;
+  font-size: 28px;
+  margin: 0;
+}
+form > * {
+  margin: 15px;
+}
+form > input[type="text"] {
+  line-height: 40px;
+  font-size: 1.1em;
+  padding-left: 15px;
+  outline: transparent;
+  border-radius: 5px;
+  border: unset;
+}
+form > input[type="text"]::placeholder {
+  font-size: 1em;
+}
+form > input:focus {
+  box-shadow: 0 0 4px 4px rgba(255, 255, 0, 0.418);
+}
+form > button {
+  font-size: 1em;
+  color: yellow;
+  border-radius: 10px;
+  border-color: rgb(255, 255, 0);
+  background-color: rgba(0, 0, 0, 0.5);
+  height: 40px;
+  outline: transparent;
+}
+form > button:hover {
+  background-color: yellow;
+  border: unset;
+  color: black;
+  cursor: pointer;
+}
+
+/* Medium and Large screen size */
+@media (min-width: 600px) {
+  .form-section {
+    text-align: center;
+    display: flex;
+    float: left;
+    flex-direction: column;
+    margin: 50px 10%;
+    width: 30%;
+    height: fit-content;
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 20px;
+    border-radius: 10px;
+  }
+  .form-section > form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+}
