@@ -76,7 +76,7 @@ form > button:hover {
     display: flex;
     float: left;
     flex-direction: column;
-    margin: 50px 10%;
+    margin: 50px 3% 0 10%;
     width: 30%;
     height: fit-content;
     background-color: rgba(0, 0, 0, 0.6);
@@ -88,4 +88,32 @@ form > button:hover {
     flex-direction: column;
     width: 100%;
   }
+  .table-section{
+    margin: 50px 10% 0 0;
+    float: right;
+    width: 43%;
+    padding: 20px;
+    height: fit-content;
+    background-color: rgba(0, 0, 0, 0.6);
+  }
+  table {
+    display: flex;
+    text-align: center;
+    width: 100%;
+    display: flex;
+  }
+  tr{
+    width: 100%;
+    padding: 0;
+    background-color: red;
+  }
+  tr > * {
+    padding: 10px;
+    width: 20%;
+  }
+  tr:first-child {
+    width: 20%;
+    padding: 5px 0px;
+  }
+  
 }
