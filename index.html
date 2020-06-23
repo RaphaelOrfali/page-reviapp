@@ -9,74 +9,86 @@
   <body>
     <nav>
       <ul>
-        <li><h1>Reviapp</h1></li>
+        <li><a href="#">Reviapp<a></li>
+        <ul>
+          <li><a href="#">CONFIGURAÇÕES</a></li>
+          <li><a href="#">SAIR</a></li>
+        </ul>
+        <li class="menu-li">
+          <input id="menu-hamburguer" type="checkbox" />
+          <label for="menu-hamburguer">
+            <div class="menu">
+              <span class="hamburguer"></span>
+            </div>
+          </label>
+        </li>
       </ul>
     </nav>
-    <section class="form-section">
+    <div class="main">
+      <section class="form-section">
         <h1>Adicionar Revisão</h1>
-      <form class="add-form">
-        <input type="text" class="review-name" placeholder="Matéria"/>
-        <input type="text" class="review-subject" placeholder="Disciplina"/>
-        <button type="submit" class="review-button">Adicionar</button>
-      </form>
-    </section>
-    <section class="chart-section"></section>
-    <section class="table-section">
-      <table>
-        <thead>
-          <tr>
-            <th>Concluído</th>
-            <th>Data de revisão</th>
-            <th>Matéria</th>
-            <th>Disciplina</th>
-            <th>Vezes revisadas</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td><input type="checkbox"/></td>
-            <td>23/06/2020</td>
-            <td>Polimorfismo</td>
-            <td>Java</td>
-            <td>1</td>
-          </tr>
-          <tr>
-            <td><input type="checkbox"/></td>
-            <td>23/06/2020</td>
-            <td>Polimorfismo</td>
-            <td>Java</td>
-            <td>1</td>
-          </tr>
-          <tr>
-            <td><input type="checkbox"/></td>
-            <td>23/06/2020</td>
-            <td>Polimorfismo</td>
-            <td>Java</td>
-            <td>1</td>
-          </tr>
-          <tr>
-            <td><input type="checkbox"/></td>
-            <td>23/06/2020</td>
-            <td>Polimorfismo</td>
-            <td>Java</td>
-            <td>1</td>
-          </tr>
-          <tr>
-            <td><input type="checkbox"/></td>
-            <td>23/06/2020</td>
-            <td>PolimorfismoPolimorfismo</td>
-            <td>Java</td>
-            <td>1</td>
-          </tr>
-          <tr>
-            <td><input type="checkbox"/></td>
-            <td>23/06/2020</td>
-            <td>Polimorfismo</td>
-            <td>Java</td>
-            <td>1</td>
-          </tr>
-        </tbody>
-      </table>
-    </section>
+        <form class="add-form">
+          <input type="text" class="review-name" placeholder="Matéria" />
+          <input type="text" class="review-subject" placeholder="Disciplina" />
+          <button type="submit" class="review-button">Adicionar</button>
+        </form>
+      </section>
+      <section class="chart-section"></section>
+      <section class="table-section">
+        <h1>Revisões</h1>
+        <table>
+          <thead>
+            <tr>
+              <th>Concluído</th>
+              <th>Próx. Rev.</th>
+              <th>Matéria</th>
+              <th>Disciplina</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><input type="checkbox" /></td>
+              <td>23/06/2020</td>
+              <td>Polimorfismo</td>
+              <td>Java</td>
+            </tr>
+            <tr>
+              <td><input type="checkbox" /></td>
+              <td>23/06/2020</td>
+              <td>Polimorfismo</td>
+              <td>Java</td>
+            </tr>
+            <tr>
+              <td><input type="checkbox" /></td>
+              <td>23/06/2020</td>
+              <td>Polimorfismo</td>
+              <td>Java</td>
+            </tr>
+            <tr>
+              <td><input type="checkbox" /></td>
+              <td>23/06/2020</td>
+              <td>Polimorfismo</td>
+              <td>Java</td>
+            </tr>
+            <tr>
+              <td><input type="checkbox" /></td>
+              <td>23/06/2020</td>
+              <td>Polimorfismo Polimorfismo</td>
+              <td>Java</td>
+            </tr>
+            <tr>
+              <td><input type="checkbox" /></td>
+              <td>23/06/2020</td>
+              <td>Polimorfismo</td>
+              <td>Java</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+    </div>
+    <footer>
+      <p>Contato: chama no Moodle</p>
+      <p>&copy; José Neco & Raphael Orfali</p>
+    </footer>
   </body>
 </html>

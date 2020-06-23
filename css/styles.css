@@ -13,42 +13,73 @@ body {
   color: white;
   margin: 0;
 }
-ul {
+nav > ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
   overflow: hidden;
-  width: 100%;
   background: linear-gradient(
     to bottom,
     rgba(0, 0, 0, 0.6),
     rgba(0, 0, 0, 0.8)
   );
   height: 42px;
+  display: flex;
+  padding: 0 12%;
+  flex-direction: row;
+  justify-content: space-between;
 }
-
-li {
-  margin-left: 10%;
-  float: left;
-}
-nav h1 {
+nav > ul > li > a {
+  padding-left: 10%;
   font-family: "Kaushan Script", cursive;
   font-size: 28px;
-  margin: 0;
+  text-decoration: none;
+  color: white;
+}
+nav > ul > ul {
+  list-style-type: none;
+  display: flex;
+  line-height: 42px;
+}
+nav > ul > ul > li > a {
+  font-weight: 600;
+  padding: 0 20px;
+  text-decoration: none;
+  height: auto;
+  color: white;
+}
+
+input {
+  display: none;
+}
+
+input:checked ~ label .hamburguer {
+  transform: rotate(45deg);
+}
+
+input:checked ~ label .hamburguer:before {
+  transform: rotate(90deg);
+  top: 0;
+}
+
+input:checked ~ label .hamburguer:after {
+  transform: rotate(90deg);
+  bottom: 0;
 }
 form > * {
-  margin: 15px;
+  margin: 5px 0;
 }
 form > input[type="text"] {
   line-height: 40px;
+  width: 100%;
   font-size: 1.1em;
-  padding-left: 15px;
   outline: transparent;
   border-radius: 5px;
   border: unset;
 }
 form > input[type="text"]::placeholder {
   font-size: 1em;
+  padding-left: 10px;
 }
 form > input:focus {
   box-shadow: 0 0 4px 4px rgba(255, 255, 0, 0.418);
@@ -57,6 +88,7 @@ form > button {
   font-size: 1em;
   color: yellow;
   border-radius: 10px;
+  width: 100%;
   border-color: rgb(255, 255, 0);
   background-color: rgba(0, 0, 0, 0.5);
   height: 40px;
@@ -68,56 +100,115 @@ form > button:hover {
   color: black;
   cursor: pointer;
 }
-section {
+footer {
+  clear: both;
+  position: relative;
+  height: 50px;
+  top: 50px;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  line-height: 0.6em;
+  font-size: 0.8em;
+  width: 100%;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.8));
+}
+.main {
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: repeat(12, 1fr);
+  padding: 30px 0;
+}
+table {
+  width: 100%;
+}
+table > * {
+  width: 100%;
+}
+tr > * {
+  padding: 10px 10px;
+  max-width: 25%;
+  word-wrap: break-word;
+  border-bottom: 2px dotted rgba(255, 255, 0, 0.493);
+}
+.form-section {
   border-radius: 10px;
   background-color: rgba(0, 0, 0, 0.6);
-  
+  padding: 30px;
+  text-align: center;
 }
-
-/* Medium and Large screen size */
-@media (min-width: 600px) {
+.table-section {
+  border-radius: 10px;
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 30px;
+  text-align: center;
+}
+.chart-section {
+  border-radius: 10px;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+/* Small screens */
+@media (max-width: 768px) {
+  body {
+    background-color: rgba(0, 0, 0, 0.4);
+  }
+  .main {
+    padding: 0;
+    margin-top: -60px;
+    display: block;
+  }
   .form-section {
-    text-align: center;
-    display: flex;
-    float: left;
-    flex-direction: column;
-    margin: 50px 3% 0 10%;
-    width: 30%;
-    height: fit-content;
-    padding: 20px;
+    visibility: hidden;
+    height: 0;
+    grid-column: 2/6;
+    grid-row: 1/3;
+    grid-row: 1/5;
   }
-  .form-section > form {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
+
+  .table-section {
+    background-color: transparent;
+    border-radius: 0;
+    padding: 0;
+    height: 100vh;
+    overflow: auto;
   }
-  .table-section{
-    margin: 50px 10% 0 0;
-    float: right;
-    width: 40%;
-    padding: 20px;
-    height: fit-content;
-    background-color: rgba(0, 0, 0, 0.6);
+  .chart-section {
+    visibility: hidden;
+    height: 0;
+    grid-column: 6/12;
+    grid-row: 1/3;
+    grid-row: 1/5;
   }
-  table {
-    text-align: center;
-    width: 100%;
+}
+/* Medium Screens */
+@media (min-width: 768px) {
+  .form-section {
+    grid-column: 2/6;
+    grid-row: 1/5;
   }
-  tr{
-    width: 100%;
-    padding: 0;   
+  .table-section {
+    grid-column: 2/12;
+    grid-row: 5/12;
   }
-  tr > * {
-    text-align: center;
-    padding: 10px;
-    width: 25vw;
-    max-width: 8vw;
-    overflow-wrap: break-word;
-    border-bottom: 2px dotted rgba(255, 255, 0, 0.733);
+  .chart-section {
+    grid-column: 6/12;
+    grid-row: 1/5;
   }
-  tr:first-child {
-    width: 15vw;
-    padding: 5px 0px;
+}
+/* Large screen size */
+@media (min-width: 1024px) {
+  .form-section {
+    grid-column: 2/5;
+    grid-row: 1/6;
   }
-  
+  .table-section {
+    grid-column: 5/12;
+    grid-row: 1/12;
+  }
+  .chart-section {
+    grid-column: 2/5;
+    grid-row: 6/12;
+  }
 }
