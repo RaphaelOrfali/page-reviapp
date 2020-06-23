@@ -68,6 +68,11 @@ form > button:hover {
   color: black;
   cursor: pointer;
 }
+section {
+  border-radius: 10px;
+  background-color: rgba(0, 0, 0, 0.6);
+  
+}
 
 /* Medium and Large screen size */
 @media (min-width: 600px) {
@@ -76,16 +81,43 @@ form > button:hover {
     display: flex;
     float: left;
     flex-direction: column;
-    margin: 50px 10%;
+    margin: 50px 3% 0 10%;
     width: 30%;
     height: fit-content;
-    background-color: rgba(0, 0, 0, 0.6);
     padding: 20px;
-    border-radius: 10px;
   }
   .form-section > form {
     display: flex;
     flex-direction: column;
     width: 100%;
   }
+  .table-section{
+    margin: 50px 10% 0 0;
+    float: right;
+    width: 40%;
+    padding: 20px;
+    height: fit-content;
+    background-color: rgba(0, 0, 0, 0.6);
+  }
+  table {
+    text-align: center;
+    width: 100%;
+  }
+  tr{
+    width: 100%;
+    padding: 0;   
+  }
+  tr > * {
+    text-align: center;
+    padding: 10px;
+    width: 25vw;
+    max-width: 8vw;
+    overflow-wrap: break-word;
+    border-bottom: 2px dotted rgba(255, 255, 0, 0.733);
+  }
+  tr:first-child {
+    width: 15vw;
+    padding: 5px 0px;
+  }
+  
 }
