@@ -49,23 +49,6 @@ nav > ul > ul > li > a {
   color: white;
 }
 
-input {
-  display: none;
-}
-
-input:checked ~ label .hamburguer {
-  transform: rotate(45deg);
-}
-
-input:checked ~ label .hamburguer:before {
-  transform: rotate(90deg);
-  top: 0;
-}
-
-input:checked ~ label .hamburguer:after {
-  transform: rotate(90deg);
-  bottom: 0;
-}
 form > * {
   margin: 5px 0;
 }
@@ -100,6 +83,7 @@ form > button:hover {
   color: black;
   cursor: pointer;
 }
+
 footer {
   clear: both;
   position: relative;
@@ -149,8 +133,12 @@ tr > * {
   border-radius: 10px;
   background-color: rgba(0, 0, 0, 0.6);
 }
+.mobile-nav {
+  height: 0;
+  visibility: hidden;
+}
 /* Small screens */
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   body {
     background-color: rgba(0, 0, 0, 0.4);
   }
@@ -160,11 +148,10 @@ tr > * {
     display: block;
   }
   .form-section {
+    margin-top: 60px;
+    background: transparent;
     visibility: hidden;
     height: 0;
-    grid-column: 2/6;
-    grid-row: 1/3;
-    grid-row: 1/5;
   }
 
   .table-section {
@@ -177,9 +164,25 @@ tr > * {
   .chart-section {
     visibility: hidden;
     height: 0;
-    grid-column: 6/12;
-    grid-row: 1/3;
-    grid-row: 1/5;
+  }
+  .default-nav {
+    height: 0;
+    visibility: hidden;
+  }
+  .mobile-nav {
+    list-style-type: none;
+    height: unset;
+    visibility: unset;
+    width: 100%;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7));
+    text-align: center;
+    height: 42px;
+  }
+  .mobile-nav a {
+    text-decoration: none;
+    font-family: "Kaushan Script", cursive;
+    font-size: 28px;
+    color: white;
   }
 }
 /* Medium Screens */

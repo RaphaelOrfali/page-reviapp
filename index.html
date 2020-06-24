@@ -5,24 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Reviapp</title>
     <link rel="stylesheet" type="text/css" href="css/styles.css" />
+    <script src="./js/index.js"></script>
   </head>
   <body>
-    <nav>
+    <nav class="default-nav">
       <ul>
         <li><a href="#">Reviapp<a></li>
         <ul>
           <li><a href="#">CONFIGURAÇÕES</a></li>
           <li><a href="#">SAIR</a></li>
         </ul>
-        <li class="menu-li">
-          <input id="menu-hamburguer" type="checkbox" />
-          <label for="menu-hamburguer">
-            <div class="menu">
-              <span class="hamburguer"></span>
-            </div>
-          </label>
-        </li>
       </ul>
+    </nav>
+    <nav class="mobile-nav">
+      <li><a href="#">Reviapp<a></li>
     </nav>
     <div class="main">
       <section class="form-section">
@@ -36,7 +32,7 @@
       <section class="chart-section"></section>
       <section class="table-section">
         <h1>Revisões</h1>
-        <table>
+        <table id="table">
           <thead>
             <tr>
               <th>Concluído</th>
@@ -46,42 +42,6 @@
             </tr>
           </thead>
           <tbody>
-            <tr>
-              <td><input type="checkbox" /></td>
-              <td>23/06/2020</td>
-              <td>Polimorfismo</td>
-              <td>Java</td>
-            </tr>
-            <tr>
-              <td><input type="checkbox" /></td>
-              <td>23/06/2020</td>
-              <td>Polimorfismo</td>
-              <td>Java</td>
-            </tr>
-            <tr>
-              <td><input type="checkbox" /></td>
-              <td>23/06/2020</td>
-              <td>Polimorfismo</td>
-              <td>Java</td>
-            </tr>
-            <tr>
-              <td><input type="checkbox" /></td>
-              <td>23/06/2020</td>
-              <td>Polimorfismo</td>
-              <td>Java</td>
-            </tr>
-            <tr>
-              <td><input type="checkbox" /></td>
-              <td>23/06/2020</td>
-              <td>Polimorfismo Polimorfismo</td>
-              <td>Java</td>
-            </tr>
-            <tr>
-              <td><input type="checkbox" /></td>
-              <td>23/06/2020</td>
-              <td>Polimorfismo</td>
-              <td>Java</td>
-            </tr>
           </tbody>
         </table>
       </section>
