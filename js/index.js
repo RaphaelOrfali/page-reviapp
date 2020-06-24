@@ -3,8 +3,6 @@ fetch("http://localhost:3000/api/reviews")
   .then((reviews) => {
     reviews
       .sort(function (a, b) {
-        // Turn your strings into dates, and then subtract them
-        // to get a value that is either negative, positive, or zero.
         return new Date(b.nextReview) - new Date(a.nextReview);
       })
       .reverse();
@@ -54,6 +52,7 @@ window.addEventListener("load", () => {
     },
     false
   );
+<<<<<<< HEAD
 });
 /* 
 <tr>
@@ -62,3 +61,6 @@ window.addEventListener("load", () => {
               <td>Polimorfismo</td>
               <td>Java</td>
             </tr>  */
+=======
+});
+>>>>>>> f2c7aa89e0af4a79d6bd1a08261e50893d4b5a1c
