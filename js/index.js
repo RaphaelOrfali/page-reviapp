@@ -52,15 +52,4 @@ window.addEventListener("load", () => {
     },
     false
   );
-<<<<<<< HEAD
 });
-/* 
-<tr>
-    <td><input type="checkbox" /></td>
-              <td>23/06/2020</td>
-              <td>Polimorfismo</td>
-              <td>Java</td>
-            </tr>  */
-=======
-});
->>>>>>> f2c7aa89e0af4a79d6bd1a08261e50893d4b5a1c
